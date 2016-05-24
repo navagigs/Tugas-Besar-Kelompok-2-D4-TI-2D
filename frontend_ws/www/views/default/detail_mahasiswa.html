@@ -1,0 +1,95 @@
+<ion-view view-title="{{ title }} ">
+		</ion-nav-back-button>
+		<ion-nav-button id="left">
+			<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+			</button>
+		</ion-nav-buttons>
+	<ion-content class="bg-gray" ng-repeat="data in mahasiswa">    
+		<section class="detailmahasiswa">
+		 <div class="list card">  
+            <ion-item class="item-avatar item-icon-right" ng-repeat="data in filtered = (mahasiswa | filter:search.searchText | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" type="item-text-wrap" >
+                  <img src="img/user_detail.png" width="200">
+    				  <table class="mahasiswa">
+					<tr>
+						<th class="text-gray-300">NPM : </th>
+						<td>{{ data.mahasiswa_npm }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Nama Lengkap: </th>
+						<td>{{ data.mahasiswa_nama }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Kelas</th>
+						<td>{{ data.kelas_nama }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Alamat</th>
+						<td>{{ data.mahasiswa_alamat }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Email</th>
+						<td>{{ data.mahasiswa_email }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">No.Telepon</th>
+						<td>{{ data.mahasiswa_tlp }}</td>
+					</tr>
+					<tr>
+						<th class="text-gray-300">Agama</th>
+						<td>{{ data.mahasiswa_agama }}</td>
+					</tr>
+				</table>
+    					<div align="right"><button class="button button-positive ion-edit" ng-click="editModal()"> Edit</button> 
+    					</div>
+     		</ion-item>
+    	</div>
+	</ion-content>
+
+<script id="edit.html" type="text/ng-template">
+        <div class="modal">
+            <ion-header-bar class="bar-raised bar-raised button-assertive ink-dark">
+                <button class="button button-icon button-clear ion-close" ng-click="batal()"></button>
+                <h1 class="title"> Edit Mahasiswa</h1>
+            </ion-header-bar>
+            <ion-content ng-repeat="data in mahasiswa">
+                <form>
+                    <div class="list">
+                        <label class="item item-input">
+                        <span class="input-label">NPM :</span>
+                            <input type="text" placeholder="{{data.mahasiswa_npm}}" ng-model="mahasiswa_npm" value="{{ data.mahasiswa_npm }}" init-from-form>
+                        </label>                       
+                        <label class="item item-input">
+                        <span class="input-label">Nama :</span>
+                            <input type="text" placeholder="{{data.mahasiswa_nama}}" ng-model="mahasiswa_nama" value="{{ data.mahasiswa_nama }}" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">Alamat :</span>
+                            <input type="text" placeholder="{{data.mahasiswa_alamat}}" ng-model="mahasiswa_alamat" value="{{ data.mahasiswa_alamat }}" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">Email :</span>
+                            <input type="text" placeholder="{{data.mahasiswa_email}}" ng-model="mahasiswa_email" value="{{ data.mahasiswa_email }}" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">No.Telepon :</span>
+                            <input type="text" placeholder="{{data.mahasiswa_tlp}}" ng-model="mahasiswa_tlp" value="{{ data.mahasiswa_tlp }}" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">Agama :</span>
+                            <input type="text" placeholder="{{data.mahasiswa_agama}}" ng-model="mahasiswa_agama" value="{{ data.mahasiswa_agama }}" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">Kelas :</span>
+                            <input type="text" placeholder="{{data.kelas_id}}" ng-model="kelas_id" value="{{ data.kelas_id }}" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                            <button class="button button-positive ion-save" ng-click="edit(mahasiswa_npm,mahasiswa_nama,mahasiswa_alamat,mahasiswa_email,mahasiswa_tlp,mahasiswa_agama,kelas_id);">
+                                Save
+                            </button>
+                        </label>
+                    </div>
+                </form>
+        </ion-content>
+        </div>
+</script>
+</ion-view>

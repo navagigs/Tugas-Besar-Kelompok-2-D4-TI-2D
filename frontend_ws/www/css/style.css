@@ -1,0 +1,800 @@
+.title {
+	color: #fff;
+}
+.center {
+	text-align: center;
+}
+
+.margin-top-10 {
+	margin-top: 10px;
+}
+
+.padding-5 {
+	padding: 5px;
+}
+
+.padding-15 {
+	padding: 15px;
+}
+
+.padding-left-10 {
+	padding-left: 10px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.bar.bar-header.bar-primary {
+	background-color: #228462;
+	color: #fff;
+}
+
+.bar.bar-header.bar-primary .button {
+	color: #fff;
+}
+
+.tabs .tab-item {
+	font-size: 16px;
+}
+
+.tabs-fullwidth .tab-item {
+	max-width: 100%;
+}
+
+.ion-list ion-item {
+	font-size: 18px;
+}
+
+.bg-white {
+	background: #ffffff;
+}
+
+.bg-gray {
+	background: #fafafa;
+}
+
+.text-black {
+	font-size: 14px;
+	color: #000;
+}
+
+.text-white {
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.text-balanced {
+	color: #FC0;
+}
+
+.text-balanced a {
+	text-decoration: none;
+	color: #FC0;
+}
+
+.text-red {
+	color: #d30000;
+}
+
+.text-gray {
+	font-size: 16px;
+	color: #747373;
+}
+
+.text-gray-300 {
+	color: #908f8f;
+}
+
+.row {
+	flex-wrap: wrap;
+}
+
+.col a {
+	text-decoration: none;
+}
+
+.col .panel-bg-white {
+	background: #ffffff;
+	-webkit-box-shadow: 0 0 8px 0 rgba(109, 109, 109, 0.2);
+	box-shadow: 0 0 8px 0 rgba(131, 131, 131, 0.2);
+	width: 100%;
+	height: 100%;
+	position: relative
+}
+
+.col .panel-bg-balanced-orange {
+    border-color: transparent;
+    background-color: #11c1f3;
+	-webkit-box-shadow: 0 0 8px 0 rgba(109, 109, 109, 0.4);
+	box-shadow: 0 0 8px 0 rgba(131, 131, 131, 0.4);
+	width: 100%;
+	height: 100%;
+	position: relative
+}
+
+.col .panel-bg-balanced {	
+  	border-color: #0c60ee;
+  	background-color: #387ef5;
+	-webkit-box-shadow: 0 0 8px 0 rgba(109, 109, 109, 0.4);
+	box-shadow: 0 0 8px 0 rgba(131, 131, 131, 0.4);
+	width: 100%;
+	height: 100%;
+	position: relative
+}
+.panel-bg-cyan-100 {
+	margin-bottom: 10px;
+	background: #f8fcff;
+	-webkit-box-shadow: 0 0 8px 0 rgba(109, 109, 109, 0.2);
+	box-shadow: 0 0 8px 0 rgba(131, 131, 131, 0.2);
+	padding-top: 8px;
+}
+
+.panel-bg-cyan-100:hover {
+	background: #ebf6ff;
+}
+
+.col .panel-bg-white p {
+	font-size: 12px;
+	color: #464646;
+	text-decoration: none;
+}
+
+.col.panel-bg-cyan-100 span {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.col .panel-bg-white span {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.col .panel-bg-white i {
+	font-size: 40px;
+	color: #464646;
+}
+
+.col.panel-bg-cyan-100 i {
+	font-size: 40px;
+	color: #464646;
+}
+
+.col.panel-bg-cyan-100 img {
+	height: 100px;
+}
+
+.col .panel-bg-white i.yellow {
+	color: #ffe200;
+}
+
+.col .panel-bg-white i.red {
+	color: #ff0000;
+}
+
+.col .panel-bg-white i.green {
+	color: #2ff500;
+}
+
+.col .panel-bg-white i.orange {
+	color: #ffa700;
+}
+
+.col .panel-bg-white i.blue {
+	color: #0042d9;
+}
+
+.col .panel-bg-white i.purple {
+	color: #a700ff;
+}
+
+.col .panel-bg-white i.gray {
+	color: #838383;
+}
+
+.col .panel-bg-white i.black {
+	color: #000000;
+}
+
+.col .panel-bg-white i.cyan {
+	color: #00c4ff;
+}
+
+.kelas,
+.mahasiswa,
+.hotlist {
+	margin-bottom: 30px;
+}
+
+.mahasiswa .mahasiswa-img {
+	background: #f8fcff;
+	text-align: center;
+}
+
+.mahasiswa .mahasiswa-img img {
+	height: 170px;
+	width: 100%;
+}
+
+.mahasiswa .mahasiswa-nama {
+	padding-left: 10px;
+	font-weight: 600;
+	color: #ff0000;
+}
+
+.mahasiswa .mahasiswa-harga {
+	padding-left: 10px;
+}
+
+.mahasiswa .mahasiswa-customer {
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.hotlist .mahasiswa-img {
+	text-align: center;
+	width: 60%;
+	float: left;
+	margin-bottom: 8px;
+	height: 100px;
+}
+
+.hotlist .mahasiswa-kelas {
+	width: 40%;
+	float: right;
+	height: 100px;
+	padding-top: 30px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.hotlist .mahasiswa-bottom {
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+.hotlist .mahasiswa-name {
+	background: #fff;
+	float: left;
+	width: 50%;
+	font-weight: 600;
+	padding: 8px;
+	margin-bottom: -5px;
+}
+
+.login input[type="text"], .login input[type="password"]{
+	color: #000;
+	background: transparent;
+	border-bottom: 1px solid #eee;
+	width: 100%;
+}
+
+.login {
+	width: 100%;
+}
+
+.login-title {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.login .username,
+.login .password {
+	margin-bottom: 20px;
+	width: 100%;
+}
+.ion-ios-search {
+	color: #FFF;
+}
+
+.search input[type="text"] {
+	color: #fff;
+	background: transparent;
+	border-bottom: 1px solid #FEFEFE;
+	padding-right: 30px;
+	margin-right: 20px;
+}
+
+.search input[type="text"]:focus {
+	border-bottom: 1px solid #FFF;
+}
+
+.search input::-moz-placeholder {
+	color: #ffffff;
+}
+
+.search input:-ms-input-placeholder {
+	color: #ffffff;
+}
+
+.search input::-webkit-input-placeholder {
+	color: #ffffff;
+	text-indent: 0;
+}
+
+.breadcrumb {
+	width: 100%;
+	padding: 5px;
+	color: #FC0;
+	border-bottom: 1px solid #eee;
+}
+
+.breadcrumb i {
+	margin-right: 20px;
+	color: #000;
+}
+
+.breadcrumb-title {
+	width: 100%;
+	color: #FC0;
+	text-align: center;
+}
+
+.filtered-length {
+	font-size: 12px;
+}
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	border-radius: 3px;
+	margin-top: 5px;
+}
+
+.pagination > li {
+	display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+	position: relative;
+	float: left;
+	padding: 5px 13px;
+	margin-left: -1px;
+	line-height: 1.37142857;
+	color: #76838f;
+	font-size: 12px;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #e4eaec;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+	margin-left: 0;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+	z-index: 2;
+	color: #387ef5;
+	background-color: #f3f7f9;
+	border-color: #e4eaec;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+	z-index: 3;
+	color: #fff;
+	cursor: default;
+  	border-color: #0c60ee;
+  	background-color: #387ef5;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+	color: #ccd5db;
+	cursor: not-allowed;
+	background-color: transparent;
+	border-color: #e4eaec;
+}
+
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+	padding: 10px 18px;
+	font-size: 18px;
+	line-height: 1.3333333;
+}
+
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+	padding: 6px 13px;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+.news {
+	padding: 10px 0px;
+}
+
+.news i {
+	font-size: 100px;
+}
+
+.news h5,
+.news h6 {
+	margin: 0px;
+}
+
+.detailmahasiswa {
+	margin: 10px 10px 30px 10px;
+}
+
+.detailmahasiswa .mahasiswa-nama {
+	font-weight: 600;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.detailmahasiswa .mahasiswa-harga {
+	font-size: 12px;
+}
+
+.detailmahasiswa .mahasiswa-terjual {
+	font-size: 12px;
+}
+
+.detailmahasiswa .mahasiswa-gambar {
+	width: 100%;
+	margin: 20px 0px;
+}
+
+.detailmahasiswa .mahasiswa-gambar img {
+	width: 300px;
+}
+
+table.mahasiswa {
+	width: 100%;
+	text-align: left;
+}
+
+table.mahasiswa tr {
+	border: 1px solid #ededed;
+}
+
+table.mahasiswa tr th {
+	padding: 5px;
+	background: #f2f2f2;
+}
+
+table.mahasiswa tr td {
+	padding: 5px;
+}
+
+.mahasiswa-deskripsi1 {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.mahasiswa-deskripsi2 {
+	width: 100%;
+}
+
+.mahasiswa-deskripsi h6 {
+	font-weight: 600;
+	font-size: 13px;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.mahasiswa-deskripsi p {
+	margin: 0px;
+}
+
+.mahasiswa-post {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.mahasiswa-post span {
+	font-size: 12px;
+}
+
+.detailmahasiswa-customer {
+	width: 100%;
+	padding: 0px 10px;
+}
+
+.detailmahasiswa-img {
+	float: left;
+}
+
+.detailmahasiswa-customer img {
+	border: 1px solid #ddd;
+	width: 70px;
+	border-radius: 100%;
+	margin-right: 15px;
+}
+
+.detailmahasiswa-customer p {
+	margin: 0px;
+	font-size: 16px;
+	margin-top: 13px;
+}
+
+.detailmahasiswa-customer span {
+	margin: 0px;
+	font-size: 12px;
+}
+
+.margin-footer {
+	margin-bottom: 140px;
+	width: 100%;
+	height: 1px;
+}
+
+#loading-bar .bar {
+	background: #2c3e50;
+}
+
+#loading-bar-spinner .spinner-icon {
+	border-top-color: #2c3e50;
+	border-left-color: #2c3e50;
+}
+
+#loading-bar .peg {
+	-moz-box-shadow: #2c3e50 1px 0 6px 1px;
+	-ms-box-shadow: #2c3e50 1px 0 6px 1px;
+	-webkit-box-shadow: #2c3e50 1px 0 6px 1px;
+	box-shadow: #2c3e50 1px 0 6px 1px;
+}
+
+/* Empty. Add your own CSS if you like */
+/* Utilities */
+
+.link {
+    color: #116262;
+    font-weight: bold;
+}
+
+h4 {
+    color: #116262;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+h4:first-child {
+    border-top: none;
+    padding-top: initial;
+}
+
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.no-border {
+    border: none;
+}
+
+.static {
+    position: static;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 30px;
+}
+
+.blue-grey-900 {
+    background-color: #263238 !important;
+    color: #fff;
+}
+/* Menu */
+
+.menu .bar.bar-header.expanded {
+    background-image: url('../img/material-graphite.jpg');
+    background-size: 120%;
+    background-position: 0%;
+    transition: all .5s ease-in-out;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.item-radio input:checked ~ .item-content {
+    background: transparent;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+.item.item-radio .radio-icon {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.item.item-radio:active .radio-icon {
+    opacity: 0;
+    transform: scale(1.6);
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.directions.button-bar {
+    margin: 0 auto;
+    width: 33.333%;
+}
+
+.directions.button-bar button {
+    line-height: 26px;
+}
+
+.ion-arrow-right-c.top-left:before {
+    transform: rotate(-135deg);
+}
+
+.ion-arrow-right-c.top-right:before {
+    transform: rotate(-45deg);
+}
+
+.ion-arrow-right-c.bottom-left:before {
+    transform: rotate(-225deg);
+}
+
+.ion-arrow-right-c.bottom-right:before {
+    transform: rotate(45deg);
+}
+
+#modal {
+    background-color: #ef4e3a;
+    border-radius: 100%;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 50%;
+    bottom: 0;
+    opacity: 0;
+    width: 700px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.expand #modal {
+    background-color: #DBDBDB;
+    border-radius: 0;
+    border-top: solid 4px #ef4e3a;
+    opacity: 1;
+    z-index: 9;
+}
+/* CODE */
+
+.code {
+    color: #333;
+    font-family: monospace;
+    padding: 10px;
+    white-space: pre;
+}
+
+.code-wrapper {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.code-wrapper::before {
+    color: #1B5E20;
+    font-family: "Ionicons";
+    speak: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: '\f216 ';
+}
+
+.code-wrapper.active::before {
+    content: '\f207 ';
+}
+
+.code-wrapper .toggle {
+    color: #4CAF50;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 8px;
+    text-decoration: underline;
+}
+
+.code-wrapper .code {
+    opacity: 0;
+    margin-top: -20px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.1s all ease-in-out;
+    z-index: 9999999999;
+}
+
+.code-wrapper.code-wrapper-last .code {
+    position: relative;
+}
+
+.code-wrapper.active .code {
+    background: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    left: 16px;
+    height: initial;
+    margin-top: 15px;
+    padding: 15px;
+    right: 16px;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    width: initial;
+}
+
+.popover {
+    left: initial !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+.platform-android .popover{
+margin-top:10px;
+}

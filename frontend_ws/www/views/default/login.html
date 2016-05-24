@@ -1,0 +1,23 @@
+<ion-view view-title="{{ title }}" name="login-view">
+	<ion-nav-bar class="bar-raised bar-raised button-assertive ink-dark">
+	</ion-nav-bar>
+	<ion-content class="bg-gray">
+		<div class="row">
+			<div class="col col-100">
+				<div class="panel-bg-white padding-15">
+					<section class="login">
+						<form name="form">
+							<div class="username">
+								<input type="text" placeholder="Username" ng-model="login.username" required>
+							</div>
+							<div class="password">
+								<input type="password" placeholder="Kata Sandi" ng-model="login.password" required>
+							</div>
+							<button class="button button-block button-positive uppercase" ng-click="login()" ng-disabled="form.$invalid">{{ title }}</button>
+						</form>
+					</section>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

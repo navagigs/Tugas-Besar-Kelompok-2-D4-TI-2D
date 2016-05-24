@@ -1,0 +1,64 @@
+<ion-view view-title="{{ title }}">
+	<ion-nav-buttons side="left">
+		<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+		</button>
+	</ion-nav-buttons>
+	  <div style="margin-top: 45px"></div>
+ 		 <div class="tabs-striped tabs-color-dark" style="position: static; margin-bottom: 15px;">
+                <div class="tabs" style="position: static;">
+                    <a class="tab-item active" href="#/app/home" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-home"></i> Home
+                    </a>
+                    <a class="tab-item" href="#/app/list_dosen" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-person"></i> Dosen
+                    </a>
+                    <a class="tab-item" href="#/app/list_mahasiswa" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-university"></i> Mahasiswa
+                    </a>
+                    <a class="tab-item" ref="#/app/setting" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-gear-a"></i> Setting
+                    </a>
+                </div>
+            </div>
+	<br><br><br>
+	<ion-content class="has-tabs-top bg-gray">
+		<section class="kelas">
+			<div class="row">
+				<div class="col col-100">
+					<div class="panel-bg-balanced center">
+						<div class="news">		
+							<h6 class="text-white">Data Kelas </h6>
+						</div>
+					</div>
+				</div>
+				<div class="col col-24 center" ng-repeat="data in kelas" ng-cloak>
+					<a href="#/app/mahasiswa/{{ data.kelas_id }}">
+						<div class="panel-bg-white padding-15">
+							<i class="{{ data.kelas_icon }} {{ data.kelas_warna }}"></i>
+							<p class="text-black">Kelas : <b>{{ data.kelas_nama }}</b></p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="kelas">
+			<div class="row">
+				<div class="col col-100">
+					<div class="panel-bg-balanced-orange center">
+						<div class="news">		
+							<h6 class="text-white">Data Dosen</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col col-24 center" ng-repeat="datads in dosen" ng-cloak>
+					<a href="#/app/list_dosen">
+						<div class="panel-bg-white padding-15">
+							<i class="ion-person silver"></i>
+							<p class="text-black"><b>{{ datads. dosen_nama }}</b><br>{{ datads. dosen_nik }}</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+	</ion-content>
+</ion-view>

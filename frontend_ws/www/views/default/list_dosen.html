@@ -1,0 +1,43 @@
+<ion-view view-title="{{ title }}">
+	<ion-nav-buttons side="left">
+		<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+		</button>
+	</ion-nav-buttons>	
+      <div style="margin-top: 45px"></div>
+         <div class="tabs-striped tabs-color-dark" style="position: static; margin-bottom: 15px;">
+                <div class="tabs" style="position: static;">
+                    <a class="tab-item " href="#/app/home" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-home"></i> Home
+                    </a>
+                    <a class="tab-item active" href="#/app/list_dosen" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-person"></i> Dosen
+                    </a>
+                    <a class="tab-item" href="#/app/list_mahasiswa" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-university"></i> Mahasiswa
+                    </a>
+                    <a class="tab-item" ref="#/app/setting" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-gear-a"></i> Setting
+                    </a>
+                </div>
+		</div>
+    <ion-content class="has-tabs-top bg-gray">
+        <div class="list card">
+     <h4 class="border-top" style="margin-left: 20px;"><i class="icon ion-person"></i> Data {{title}}</h4>
+            <div class="list">
+            <ion-item  ng-repeat="data in filtered = (dosen | filter:search.searchText | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" type="item-text-wrap">
+                <a class="item item-avatar">
+                    <img src="img/material1.jpg">
+                    <h3>{{data.dosen_nik}}</h3>
+                    <h2>{{data.dosen_nama}}</h2>
+                    <p>{{data.dosen_matkul}}</p>
+                </a>
+            </ion-item>
+        </div>
+            </div>
+        <div class="col col-100 center" ng-show="filtered.length > 0">
+            <a href="">
+                <div pagination="" page="currentPage" on-select-page="setPage(page)" boundary-links="true" total-items="filteredItems" items-per-page="entryLimit" class="pagination-small" previous-text="&laquo;" next-text="&raquo;" ng-class="'{{ breadcrumbcolor }}'"></div>
+            </a>
+        </div>
+	</ion-content>
+</ion-view>
