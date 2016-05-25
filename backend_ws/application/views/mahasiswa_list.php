@@ -25,4 +25,46 @@
 		    <th>Action</th>
                 </tr>
             </thead>
-	    
+	    <tbody>
+            <?php
+            $start = 0;
+            foreach ($mahasiswa_data as $mahasiswa)
+            {
+                ?>
+                <tr>
+		    <td><?php echo ++$start ?></td>
+		    <td><?php echo $mahasiswa->mahasiswa_npm ?></td>
+		    <td><?php echo $mahasiswa->mahasiswa_nama ?></td>
+		    <td><?php echo $mahasiswa->mahasiswa_alamat ?></td>
+		    <td><?php echo $mahasiswa->mahasiswa_email ?></td>
+		    <td><?php echo $mahasiswa->mahasiswa_tlp ?></td>
+		    <td><?php echo $mahasiswa->mahasiswa_agama ?></td>
+		    <td><?php echo $mahasiswa->kelas_nama ?></td>
+		    <td style="text-align:center" width="140px">
+			<?php 
+			echo anchor(site_url('mahasiswa/read/'.$mahasiswa->mahasiswa_id),'<i class="fa fa-eye"></i>',array('title'=>'detail','class'=>'btn btn-danger btn-sm')); 
+			echo '  '; 
+			echo anchor(site_url('mahasiswa/update/'.$mahasiswa->mahasiswa_id),'<i class="fa fa-pencil-square-o"></i>',array('title'=>'edit','class'=>'btn btn-danger btn-sm')); 
+			echo '  '; 
+			echo anchor(site_url('mahasiswa/delete/'.$mahasiswa->mahasiswa_id),'<i class="fa fa-trash-o"></i>','title="delete" class="btn btn-danger btn-sm" onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+			?>
+		    </td>
+	        </tr>
+                <?php
+            }
+            ?>
+            </tbody>
+        </table>
+        <script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script>
+        <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script>
+        <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#mytable").dataTable();
+            });
+        </script>
+                    </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </section><!-- /.content -->
