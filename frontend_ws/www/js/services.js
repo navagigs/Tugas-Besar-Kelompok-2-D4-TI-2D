@@ -1,8 +1,7 @@
 var app = angular.module('App.services', [])
 
 app.factory('kelasService', function ($http) {
-	//var baseUrl = 'http://localhost:8080/tbwebservice/server/kelas/';
-	var baseUrl = 'http://localhost:8080/tbwebservice/server/kelas/';
+	var baseUrl = 'http://server.nava.web.id/kelas/';
 	return {
 		getAll: function () {
 			return $http.get(baseUrl + 'select.php');
@@ -12,7 +11,7 @@ app.factory('kelasService', function ($http) {
 })
 
 app.factory('dosenService', function ($http) {
-	var baseUrl = 'http://localhost:8080/tbwebservice/server/dosen/';
+	var baseUrl = 'http://server.nava.web.id/dosen/';
 	return {
 		getAll: function () {
 			return $http.get(baseUrl + 'select_dosen.php');
@@ -22,7 +21,7 @@ app.factory('dosenService', function ($http) {
 })
 
 app.factory('mahasiswaService', function ($http) {
-	var baseUrl = 'http://localhost:8080/tbwebservice/server/mahasiswa/';
+	var baseUrl = 'http://server.nava.web.id/mahasiswa/';
 	return {
 		getAll: function () {
 			return $http.get(baseUrl + 'select_mhs.php');
@@ -52,13 +51,4 @@ app.factory('mahasiswaService', function ($http) {
         }
 	};
 
-})
-
-app.factory('loginService', function ($http, AuthService) {
-	var baseUrl = 'http://localhost:8080/tbwebservice/server/login/';
-	return {
-		getIdlogin: function () {
-			return $http.get(baseUrl + 'select_id_login.php?login_username=' + AuthService.username());
-		},
-	};
 });

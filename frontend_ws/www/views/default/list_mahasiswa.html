@@ -19,14 +19,10 @@
                     <a class="tab-item  active" href="#/app/list_mahasiswa" data-ink-color="#ef473a" data-ink-opacity=".35">
                         <i class="icon ion-university"></i> Mahasiswa
                     </a>
-                    <a class="tab-item" ref="#/app/setting" data-ink-color="#ef473a" data-ink-opacity=".35">
-                        <i class="icon ion-gear-a"></i> Setting
-                    </a>
                 </div>
             </div>
 <ion-content class="has-tabs-top bg-gray">
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="showData()"></ion-refresher>
-        <div class="list card"> <a href="#/app/add_mahasiswa" class="button  button-positive ion-plus right" style="float: right;"> Tambah Mahasiswa</a> </div>
          <div class="list card"><h4 class="border-top" style="margin-left: 20px;"><i class="icon ion-university"></i> Data {{title}}</h4>
          <div class="list">
             <ion-list> 
@@ -34,9 +30,6 @@
                 <img src="img/user.png">
                 <h2>{{data.mahasiswa_nama}}</h2>
                 <p>{{data.mahasiswa_npm}}</p>
-                <i class="icon ion-chevron-right icon-accessory"></i>
-                <ion-option-button class="button-assertive" ng-click="delete(data);">
-                  Delete
                 </ion-option-button>
               </ion-item>
             </ion-list>

@@ -1,44 +1,7 @@
 var app = angular.module('App.controllers', [])
 
-app.controller('AppCtrl', function ($scope, $state, $stateParams, $ionicPopup, $window, AuthService, loginService) {
+app.controller('AppCtrl', function ($scope, $state, $stateParams, $ionicPopup, $window) {
 	$scope.title = "D4-TI 2014";	
-	$scope.username = AuthService.username();
-
-	$scope.logout = function () {
-		AuthService.logout();
-		$window.location.reload(true);
-		$state.go('login');
-	};
-
-	$scope.goBack = function () {
-		$window.history.back();
-	};
-
-	$scope.showDataId = function () {
-		loginService.getIdlogin().success(function (data) {
-			$scope.login = data;
-		});
-	};
-	$scope.showDataId();
-})
-
-app.controller('LoginCtrl', function ($scope, $state, AuthService, $ionicPopup) {
-	$scope.title = "Login";
-	
-    $scope.login = function () {
-       AuthService.login($scope.login).then(function (data) {
-            if (Object.keys(data.data).length === 1) {
-                $state.go('app.home');
-            } else {
-                $ionicPopup.alert({
-                    title: "Information",
-                    template: "Username atau Password salah",
-                    okText: 'Ok',
-                    okType: 'button-balanced'
-                });
-            }
-        });
-    };
 })
 
 
@@ -434,69 +397,10 @@ app.controller('ListdosenCtrl', function ($scope, $state, dosenService, $timeout
 	});
 })
 
-app.service('AuthService', function ($http) {
-	var LOCAL_TOKEN_KEY = 'yourTokenKey';
-	var username = '';
-	var isAuthenticated = false;
-	var authToken;
 
-	function loadUserCredentials() {
-		var token = window.localStorage.getItem(LOCAL_TOKEN_KEY);
-		if (token) {
-			useCredentials(token);
-		}
-	}
 
-	function storeUserCredentials(token) {
-		window.localStorage.setItem(LOCAL_TOKEN_KEY, token);
-		useCredentials(token);
-	}
+app.controller('SettingCtrl', function ($scope, $state) {
+	$scope.title = "Setting";
+		$state.go('app.setting');
 
-	function useCredentials(token) {
-		username = token.split('.')[0];
-		isAuthenticated = true;
-	}
-
-	function destroyUserCredentials() {
-		authToken = undefined;
-		username = '';
-		isAuthenticated = false;
-		$http.defaults.headers.common['X-Auth-Token'] = undefined;
-		window.localStorage.removeItem(LOCAL_TOKEN_KEY);
-	}
-
-	var logout = function () {
-		destroyUserCredentials();
-	};
-
-	loadUserCredentials();
-
-	return {
-		login: function (login) {
-			return storeUserCredentials(login.username + '.yourServerToken'), $http.get("http://localhost:8080/tbwebservice/server/login/login.php?user=" + login.username + "&pass=" + login.password + "");
-		},
-		logout: logout,
-		isAuthenticated: function () {
-			return isAuthenticated;
-		},
-		username: function () {
-			return username;
-		}
-	};
-})
-
-app.factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
-	return {
-		responseError: function (response) {
-			$rootScope.$broadcast({
-				401: AUTH_EVENTS.notAuthenticated,
-				403: AUTH_EVENTS.notAuthorized
-			}[response.status], response);
-			return $q.reject(response);
-		}
-	};
-})
-
-app.config(function ($httpProvider) {
-	$httpProvider.interceptors.push('AuthInterceptor');
-});
+	});

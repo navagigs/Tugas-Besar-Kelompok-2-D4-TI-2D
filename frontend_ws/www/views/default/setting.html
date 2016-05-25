@@ -1,0 +1,68 @@
+<ion-header-bar class="bar-positive">
+        <button class="button button-icon icon ion-ios7-minus-outline" ng-click="data.showDelete = 
+        !data.showDelete; data.showReorder=false"></button>
+</ion-header-bar>
+<ion-view view-title="{{ title }}">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>  
+      <div style="margin-top: 45px"></div>
+         <div class="tabs-striped tabs-color-dark" style="position: static; margin-bottom: 15px;">
+                <div class="tabs" style="position: static;">
+                    <a class="tab-item " href="#/app/home" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-home"></i> Home
+                    </a>
+                    <a class="tab-item" href="#/app/list_dosen" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-person"></i> Dosen
+                    </a>
+                    <a class="tab-item  active" href="#/app/list_mahasiswa" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-university"></i> Mahasiswa
+                    </a>
+                    <a class="tab-item" href="#/app/setting" data-ink-color="#ef473a" data-ink-opacity=".35">
+                        <i class="icon ion-gear-a"></i> Setting
+                    </a>
+                </div>
+            </div>
+	<ion-content class="bg-gray">    
+		<section>
+		 <div class="list card">  
+            <ion-item class="item-avatar item-icon-right" type="item-text-wrap" >
+    				TB Matakuliah Web Service<br>
+    				<b>#D4-TI-2D</b>
+    				<table class="mahasiswa">
+						<tr>
+							<th>Nama</th>
+							<th>NPM</th>
+						</tr>
+						<tr>
+							<td>Nava Gia Ginasta</td>
+							<td>1144096</td>
+						</tr>
+						<tr>
+							<td>Ayu Anggara</td>
+							<td>1144014</td>
+						</tr>
+						<tr>
+							<td>Faisal Akbar R</td>
+							<td>1144010 </td>
+						</tr>
+						<tr>
+							<td>Alfi Zulfian Abdi</td>
+							<td>1144024</td>
+						</tr>
+						<tr>
+							<td>Yogi Nugraha</td>
+							<td>1144076</td>
+						</tr>
+						<tr>
+							<td>Bayu Rizki</td>
+							<td>1144100</td>
+						</tr>
+						</table>
+					</table>
+     		</ion-item>
+    	</div>
+	</ion-content>
+
+</ion-view>

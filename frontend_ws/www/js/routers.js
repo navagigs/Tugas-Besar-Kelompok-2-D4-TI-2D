@@ -2,7 +2,6 @@ var app = angular.module('App.routers', [])
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
-
 		.state('app', {
 		url: '/app',
 		abstract: true,
@@ -10,11 +9,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		controller: 'AppCtrl'
 	})
 
-	.state('login', {
-		url: '/login',
-		templateUrl: 'views/default/login.html',
-		controller: 'LoginCtrl'
-	})
 	.state('app.home', {
 		url: '/home',
 		views: {
@@ -77,6 +71,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		}
 	})
 
+	.state('app.setting', {
+		url: '/setting',
+		views: {
+			'menuContent': {
+				templateUrl: 'views/default/setting.html',
+				controller: 'SettingCtrl'
+			}
+		}
+	})
+
 	
-	$urlRouterProvider.otherwise('/login');
+	$urlRouterProvider.otherwise('/app/home');
 });
