@@ -16,23 +16,27 @@
         </style>
     </head>
     <body>
-        <h2>Dosen List</h2>
+        <h2>Menu List</h2>
         <table class="word-table" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Dosen Nik</th>
-		<th>Dosen Nama</th>
-		<th>Dosen Matkul</th>
+		<th>Name</th>
+		<th>Link</th>
+		<th>Icon</th>
+		<th>Is Active</th>
+		<th>Is Parent</th>
 		
             </tr><?php
-            foreach ($dosen_data as $dosen)
+            foreach ($menu_data as $menu)
             {
                 ?>
                 <tr>
 		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $dosen->dosen_nik ?></td>
-		      <td><?php echo $dosen->dosen_nama ?></td>
-		      <td><?php echo $dosen->dosen_matkul ?></td>	
+		      <td><?php echo $menu->name ?></td>
+		      <td><?php echo $menu->link ?></td>
+		      <td><?php echo $menu->icon ?></td>
+		      <td><?php echo $menu->is_active ?></td>
+		      <td><?php echo $menu->is_parent ?></td>	
                 </tr>
                 <?php
             }

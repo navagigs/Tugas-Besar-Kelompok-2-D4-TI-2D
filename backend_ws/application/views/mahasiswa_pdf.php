@@ -16,23 +16,28 @@
         </style>
     </head>
     <body>
-        <h2>Dosen List</h2>
+        <h2>Mahasiswa List</h2>
         <table class="word-table" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Dosen Nik</th>
-		<th>Dosen Nama</th>
-		<th>Dosen Matkul</th>
-		
-            </tr><?php
-            foreach ($dosen_data as $dosen)
-            {
-                ?>
+        		<th>Mahasiswa Npm</th>
+        		<th>Mahasiswa Nama</th>
+        		<th>Mahasiswa Alamat</th>
+        		<th>Mahasiswa Email</th>
+        		<th>Mahasiswa Tlp</th>
+        		<th>Mahasiswa Agama</th>
+        		<th>Kelas Id</th>
+            </tr>
+            <?php foreach ($mahasiswa_data as $mahasiswa) { ?>
                 <tr>
-		      <td><?php echo ++$start ?></td>
-		      <td><?php echo $dosen->dosen_nik ?></td>
-		      <td><?php echo $dosen->dosen_nama ?></td>
-		      <td><?php echo $dosen->dosen_matkul ?></td>	
+    		      <td><?php echo ++$start ?></td>
+    		      <td><?php echo $mahasiswa->mahasiswa_npm ?></td>
+    		      <td><?php echo $mahasiswa->mahasiswa_nama ?></td>
+    		      <td><?php echo $mahasiswa->mahasiswa_alamat ?></td>
+    		      <td><?php echo $mahasiswa->mahasiswa_email ?></td>
+    		      <td><?php echo $mahasiswa->mahasiswa_tlp ?></td>
+    		      <td><?php echo $mahasiswa->mahasiswa_agama ?></td>
+    		      <td><?php echo $mahasiswa->kelas_id ?></td>	
                 </tr>
                 <?php
             }
