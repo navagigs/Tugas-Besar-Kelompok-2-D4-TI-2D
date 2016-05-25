@@ -15,4 +15,28 @@
             }
         </style>
     </head>
+    <body>
+        <h2>Kelas List</h2>
+        <table class="word-table" style="margin-bottom: 10px">
+            <tr>
+                <th>No</th>
+		<th>Kelas Nama</th>
+		<th>Kelas Icon</th>
+		<th>Kelas Warna</th>
+		
+            </tr><?php
+            foreach ($kelas_data as $kelas)
+            {
+                ?>
+                <tr>
+		      <td><?php echo ++$start ?></td>
+		      <td><?php echo $kelas->kelas_nama ?></td>
+		      <td><?php echo $kelas->kelas_icon ?></td>
+		      <td><?php echo $kelas->kelas_warna ?></td>	
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </body>
 </html>
