@@ -22,8 +22,8 @@
      <h4 class="border-top" style="margin-left: 20px;"><i class="icon ion-person"></i> Data {{title}}</h4>
             <div class="list">
             <ion-item  ng-repeat="data in filtered = (dosen | filter:search.searchText | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" type="item-text-wrap">
-                <a class="item item-avatar">
-                    <img src="img/material1.jpg">
+                <a class="item item-avatar">                    
+                  <img src="http://localhost:8080/backend_ws/assets/images/dosen/{{ data.dosen_foto }}" width="600">
                     <h3>{{data.dosen_nik}}</h3>
                     <h2>{{data.dosen_nama}}</h2>
                     <p>{{data.dosen_matkul}}</p>

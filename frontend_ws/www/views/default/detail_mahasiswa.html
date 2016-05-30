@@ -8,7 +8,7 @@
 		<section class="detailmahasiswa">
 		 <div class="list card">  
             <ion-item class="item-avatar item-icon-right" ng-repeat="data in filtered = (mahasiswa | filter:search.searchText | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" type="item-text-wrap" >
-                  <img src="img/user_detail.png" width="200">
+                  <img src="http://localhost:8080/backend_ws/assets/images/mahasiswa/{{ data.mahasiswa_foto }}" width="600">
     				  <table class="mahasiswa">
 					<tr>
 						<th class="text-gray-300">NPM : </th>

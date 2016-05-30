@@ -1,7 +1,7 @@
 var app = angular.module('App.services', [])
 
 app.factory('kelasService', function ($http) {
-	var baseUrl = 'http://server.nava.web.id/kelas/';
+	var baseUrl = 'http://localhost:8080/tbwebservice/server/kelas/';
 	return {
 		getAll: function () {
 			return $http.get(baseUrl + 'select.php');
@@ -11,7 +11,7 @@ app.factory('kelasService', function ($http) {
 })
 
 app.factory('dosenService', function ($http) {
-	var baseUrl = 'http://server.nava.web.id/dosen/';
+	var baseUrl = 'http://localhost:8080/tbwebservice/server/dosen/';
 	return {
 		getAll: function () {
 			return $http.get(baseUrl + 'select_dosen.php');
@@ -21,7 +21,7 @@ app.factory('dosenService', function ($http) {
 })
 
 app.factory('mahasiswaService', function ($http) {
-	var baseUrl = 'http://server.nava.web.id/mahasiswa/';
+	var baseUrl = 'http://localhost:8080/tbwebservice/server/mahasiswa/';
 	return {
 		getAll: function () {
 			return $http.get(baseUrl + 'select_mhs.php');

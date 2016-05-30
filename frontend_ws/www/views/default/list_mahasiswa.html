@@ -27,7 +27,7 @@
          <div class="list">
             <ion-list> 
               <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="data in filtered = (mahasiswa | filter:search.searchText | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit" type="item-text-wrap" href="#/app/mahasiswa/detail_mhs/{{data.mahasiswa_id}}">
-                <img src="img/user.png">
+                <img src="http://localhost:8080/backend_ws/assets/images/mahasiswa/{{data.mahasiswa_foto}}">
                 <h2>{{data.mahasiswa_nama}}</h2>
                 <p>{{data.mahasiswa_npm}}</p>
                 </ion-option-button>
