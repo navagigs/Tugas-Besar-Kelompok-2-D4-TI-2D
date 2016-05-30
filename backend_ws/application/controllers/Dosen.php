@@ -43,6 +43,7 @@ class Dosen extends CI_Controller
 		'dosen_nik' => $row->dosen_nik,
 		'dosen_nama' => $row->dosen_nama,
 		'dosen_matkul' => $row->dosen_matkul,
+        'dosen_foto' => $row->dosen_foto,
 	    );
             $this->template->load('template','dosen_read', $data);
         } else {
@@ -75,6 +76,7 @@ class Dosen extends CI_Controller
 		'dosen_nik' => $this->input->post('dosen_nik',TRUE),
 		'dosen_nama' => $this->input->post('dosen_nama',TRUE),
 		'dosen_matkul' => $this->input->post('dosen_matkul',TRUE),
+        'dosen_foto' => upload_image('dosen_foto', "./assets/images/dosen/", "230x160"),
 	    );
 
             $this->Dosen_model->insert($data);
@@ -95,6 +97,7 @@ class Dosen extends CI_Controller
 		'dosen_nik' => set_value('dosen_nik', $row->dosen_nik),
 		'dosen_nama' => set_value('dosen_nama', $row->dosen_nama),
 		'dosen_matkul' => set_value('dosen_matkul', $row->dosen_matkul),
+        'dosen_foto' => set_value('dosen_foto', $row->dosen_foto),
 	    );
             $this->template->load('template','dosen_form', $data);
         } else {
@@ -114,6 +117,7 @@ class Dosen extends CI_Controller
 		'dosen_nik' => $this->input->post('dosen_nik',TRUE),
 		'dosen_nama' => $this->input->post('dosen_nama',TRUE),
 		'dosen_matkul' => $this->input->post('dosen_matkul',TRUE),
+        'dosen_foto' => upload_image('dosen_foto', "./assets/images/dosen/", "230x160"),
 	    );
 
             $this->Dosen_model->update($this->input->post('dosen_id', TRUE), $data);

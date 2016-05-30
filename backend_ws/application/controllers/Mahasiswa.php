@@ -47,6 +47,7 @@ class Mahasiswa extends CI_Controller
 		'mahasiswa_email' => $row->mahasiswa_email,
 		'mahasiswa_tlp' => $row->mahasiswa_tlp,
 		'mahasiswa_agama' => $row->mahasiswa_agama,
+        'mahasiswa_foto' => $row->mahasiswa_foto,
 		'kelas_id' => $row->kelas_id,
 	    );
             $this->template->load('template','mahasiswa_read', $data);
@@ -68,6 +69,7 @@ class Mahasiswa extends CI_Controller
 	    'mahasiswa_email' => set_value('mahasiswa_email'),
 	    'mahasiswa_tlp' => set_value('mahasiswa_tlp'),
 	    'mahasiswa_agama' => set_value('mahasiswa_agama'),
+        'mahasiswa_foto' => set_value('mahasiswa_foto'),
 	    'kelas_id' => set_value('kelas_id'),
 	);
         $this->template->load('template','mahasiswa_form', $data);
@@ -88,6 +90,7 @@ class Mahasiswa extends CI_Controller
 		'mahasiswa_email' => $this->input->post('mahasiswa_email',TRUE),
 		'mahasiswa_tlp' => $this->input->post('mahasiswa_tlp',TRUE),
 		'mahasiswa_agama' => $this->input->post('mahasiswa_agama',TRUE),
+        'mahasiswa_foto' => upload_image('mahasiswa_foto', "./assets/images/mahasiswa/", "230x160"),
 		'kelas_id' => $this->input->post('kelas_id',TRUE),
 	    );
 
@@ -112,6 +115,7 @@ class Mahasiswa extends CI_Controller
 		'mahasiswa_email' => set_value('mahasiswa_email', $row->mahasiswa_email),
 		'mahasiswa_tlp' => set_value('mahasiswa_tlp', $row->mahasiswa_tlp),
 		'mahasiswa_agama' => set_value('mahasiswa_agama', $row->mahasiswa_agama),
+        'mahasiswa_foto' => set_value('mahasiswa_foto', $row->mahasiswa_foto),
 		'kelas_id' => set_value('kelas_id', $row->kelas_id),
 	    );
             $this->template->load('template','mahasiswa_form', $data);
@@ -135,6 +139,7 @@ class Mahasiswa extends CI_Controller
 		'mahasiswa_email' => $this->input->post('mahasiswa_email',TRUE),
 		'mahasiswa_tlp' => $this->input->post('mahasiswa_tlp',TRUE),
 		'mahasiswa_agama' => $this->input->post('mahasiswa_agama',TRUE),
+        'mahasiswa_foto' => upload_image('mahasiswa_foto', "./assets/images/mahasiswa/", "230x160"),
 		'kelas_id' => $this->input->post('kelas_id',TRUE),
 	    );
 

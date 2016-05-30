@@ -199,10 +199,6 @@ class Restfull extends CI_Controller {
 
 
 	//KELAS
-	public function get_id_mhs(){
-	
-	}
-
 	public function get_all_kelas(){
 		// Query from m_restfull.php
 		$kelas= $this->m_restfull->get_all_kelas();

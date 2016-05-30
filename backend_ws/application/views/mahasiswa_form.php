@@ -7,7 +7,7 @@
                 
                   <h3 class='box-title'>MAHASISWA</h3>
                       <div class='box box-primary'>
-        <form action="<?php echo $action; ?>" method="post"><table class='table table-bordered'>
+        <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"><table class='table table-bordered'>
 	    <tr><td>Mahasiswa Npm <?php echo form_error('mahasiswa_npm') ?></td>
             <td><input type="text" class="form-control" name="mahasiswa_npm" id="mahasiswa_npm" placeholder="Mahasiswa Npm" value="<?php echo $mahasiswa_npm; ?>" />
         </td>
@@ -26,6 +26,18 @@
 	    <tr><td>Mahasiswa Agama <?php echo form_error('mahasiswa_agama') ?></td>
             <td><input type="text" class="form-control" name="mahasiswa_agama" id="mahasiswa_agama" placeholder="Mahasiswa Agama" value="<?php echo $mahasiswa_agama; ?>" />
         </td>
+      <?php if ($mahasiswa_foto){?>
+      <tr><td></td>
+            <td><img src="<?php echo base_url()."assets/images/mahasiswa/kecil_".$mahasiswa_foto;?>" width="200" />
+        </td>
+      <tr><td>Foto <?php echo form_error('mahasiswa_foto') ?></td>
+            <td><input type="file" required class="form-control btn-sm input-sm" name="mahasiswa_foto" id="mahasiswa_foto"  />
+        </td>
+      <?php } else {?>
+      <tr><td>Foto <?php echo form_error('mahasiswa_foto') ?></td>
+            <td><input type="file" required class="form-control btn-sm input-sm" name="mahasiswa_foto" id="mahasiswa_foto"  />
+        </td>
+        <?php } ?>
 	    <tr><td>Kelas <?php echo form_error('kelas_id') ?></td>
         <td> <?php $this->Mahasiswa_model->combo_box("SELECT * FROM kelas", 'kelas_id', 'kelas_id', 'kelas_nama', $kelas_id);?>
         </td>

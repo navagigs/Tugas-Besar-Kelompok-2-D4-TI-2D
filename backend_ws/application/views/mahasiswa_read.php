@@ -13,6 +13,7 @@
 	    <tr><td>Mahasiswa Email</td><td><?php echo $mahasiswa_email; ?></td></tr>
 	    <tr><td>Mahasiswa Tlp</td><td><?php echo $mahasiswa_tlp; ?></td></tr>
 	    <tr><td>Mahasiswa Agama</td><td><?php echo $mahasiswa_agama; ?></td></tr>
+      <tr><td>Foto</td><td><img src="<?php echo base_url()."assets/images/mahasiswa/kecil_".$mahasiswa_foto;?>" width="200" /></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('mahasiswa') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
         </div><!-- /.box-body -->
