@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2016 at 04:20 PM
+-- Generation Time: May 30, 2016 at 12:45 PM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `dosen` (
   `dosen_nik` varchar(15) NOT NULL,
   `dosen_nama` varchar(50) NOT NULL,
   `dosen_matkul` varchar(50) NOT NULL,
+  `dosen_foto` varchar(100) NOT NULL,
   PRIMARY KEY (`dosen_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
@@ -38,11 +39,11 @@ CREATE TABLE IF NOT EXISTS `dosen` (
 -- Dumping data for table `dosen`
 --
 
-INSERT INTO `dosen` (`dosen_id`, `dosen_nik`, `dosen_nama`, `dosen_matkul`) VALUES
-(1, '1122335555', 'M.Nurkamal, ST., MT', 'Web Service'),
-(2, '1122334444', 'M.Yusril, S.Kom., M.Kom', 'Jaringan Komputer'),
-(3, '1122336666', 'Woro Isti, ST., MT', 'Ansi'),
-(4, '1122337777', 'Roni A, ST., M.Kom', 'Web Design');
+INSERT INTO `dosen` (`dosen_id`, `dosen_nik`, `dosen_nama`, `dosen_matkul`, `dosen_foto`) VALUES
+(1, '1122335555', 'M.Nurkamal, ST., MT', 'Web Service', '1464604843-dosen.JPG'),
+(2, '1122334444', 'M.Yusril, S.Kom., M.Kom', 'Jaringan Komputer', '1464604834-dosen.JPG'),
+(3, '1122336666', 'Woro Isti, ST., MT', 'Ansi', '1464604825-dosen.JPG'),
+(4, '1122337777', 'Roni A, ST., M.Kom', 'Web Design', '1464604809-dosen.JPG');
 
 -- --------------------------------------------------------
 
@@ -125,17 +126,18 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `mahasiswa_email` varchar(50) NOT NULL,
   `mahasiswa_tlp` varchar(15) NOT NULL,
   `mahasiswa_agama` varchar(11) NOT NULL,
+  `mahasiswa_foto` varchar(100) NOT NULL,
   `kelas_id` int(3) NOT NULL,
   PRIMARY KEY (`mahasiswa_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`mahasiswa_id`, `mahasiswa_npm`, `mahasiswa_nama`, `mahasiswa_alamat`, `mahasiswa_email`, `mahasiswa_tlp`, `mahasiswa_agama`, `kelas_id`) VALUES
-(1, '1144096', 'Nava Gia Ginasta', 'Cianjur', 'navagiaginasta@gmail.com', '087820033395', 'Islam', 4),
-(23, '1144014', 'Ayu Anggara', 'Parepare', 'ayu@gmail.com', '1029929', 'Islam', 4);
+INSERT INTO `mahasiswa` (`mahasiswa_id`, `mahasiswa_npm`, `mahasiswa_nama`, `mahasiswa_alamat`, `mahasiswa_email`, `mahasiswa_tlp`, `mahasiswa_agama`, `mahasiswa_foto`, `kelas_id`) VALUES
+(1, '1144096', 'Nava Gia Ginasta', 'Cianjur', 'navagiaginasta@gmail.com', '087820033395', 'Islam', '1464604457-nava.JPG', 4),
+(23, '1144014', 'Ayu Anggara', 'Parepare', 'ayu@gmail.com', '1029929', 'Islam', '1464604482-ayu.JPG', 4);
 
 -- --------------------------------------------------------
 
@@ -194,8 +196,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1464099373, 1, 'Admin', 'istrator', 'ADMIN', '0'),
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1464099373, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1464603054, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1464603054, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
